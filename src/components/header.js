@@ -1,6 +1,25 @@
 import axios from "axios";
 
 const Header = (title, date, temp) => {
+  const headerDiv = document.createElement('div');
+  const headerDate = document.createElement('span');
+  const headerTitle = document.createElement('h1');
+  const headerTemp = document.createElement('span');
+
+  headerDiv.classList.add('header');
+  headerDate.classList.add('date');
+  headerTemp.classList.add('temp');
+
+  headerDate.textContent = `${date}`;
+  headerTitle.textContent = `${title}`;
+  headerTemp.textContent = `${temp}`;
+
+  headerDiv.appendChild(headerDate);
+  headerDiv.appendChild(headerTitle);
+  headerDiv.appendChild(headerTemp);
+ 
+  return headerDiv;
+}
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -13,7 +32,7 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-}
+
 
 const headerAppender = (selector) => {
   // TASK 2
