@@ -35,6 +35,9 @@ const Header = (title, date, temp) => {
 
 
 const headerAppender = (selector) => {
+  const headerDiv = Header({title: selector.title, date: selector.date, temp: selector.temp});
+  document.querySelector(selector).appendChild(headerDiv);
+
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
