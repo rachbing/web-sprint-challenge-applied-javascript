@@ -49,7 +49,7 @@ const Card = (article) => {
 
 const cardAppender = (selector) => {
   const entryPoint = document.querySelector(selector);
-  axios.get("http://localhost:5000/api/articles")
+  axios.get("http://localhost:5001/api/articles")
   .then(res => {
     for(let i = 0; i < res.data.articles.bootstrap.length; i++) {
       const bootstrap = res.data.articles.bootstrap[i];
